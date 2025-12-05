@@ -2,209 +2,175 @@
 
 > **Challenge Green IT** — NoctEvent × O2Switch
 
-Application web démontrant les meilleures pratiques d'éco-conception numérique, conçue pour minimiser l'empreinte environnementale tout en offrant une expérience utilisateur moderne et professionnelle.
+---
+
+## Présentation
+
+ÉcoWeb est une application web éco-conçue qui permet d'analyser et de réduire l'empreinte carbone des sites web. Elle a été développée dans le cadre du Challenge Green IT organisé par NoctEvent en partenariat avec O2Switch.
+
+L'application met en pratique les principes du numérique responsable tout en offrant des outils concrets pour sensibiliser et calculer l'impact environnemental du web.
 
 ---
 
-## 📊 Métriques de Performance Environnementale
+## Métriques de performance
 
-| Métrique | ÉcoWeb | Moyenne Web | Amélioration |
-|----------|--------|-------------|--------------|
-| **Éléments DOM** | ~180 | ~1500 | **8× moins** |
-| **Poids total** | ~30 Ko | ~2400 Ko | **80× plus léger** |
-| **Requêtes HTTP** | 1 | ~80 | **80× moins** |
-| **CO₂ par visite** | ~0.006g | ~0.5g | **83× moins polluant** |
-
----
-
-## ✨ Fonctionnalités
-
-### 1. Éco-Score en Temps Réel
-- Calcul automatique du score environnemental de la page (0-100)
-- Affichage visuel avec jauge SVG animée
-- Grade de performance (A+ à E)
-- Métriques détaillées : CO₂/visite, arbres équivalents, énergie consommée
-
-### 2. Analyseur de Site Web
-- Simulation d'analyse environnementale pour n'importe quelle URL
-- Évaluation des éléments DOM, taille et requêtes HTTP
-- Indicateurs visuels colorés (vert/jaune/rouge)
-- Recommandations personnalisées d'optimisation
-
-### 3. Calculateur d'Impact Carbone
-- Estimation de l'empreinte carbone annuelle d'un site
-- Paramètres personnalisables : visites, pages/visite, poids moyen
-- Équivalences concrètes : km en voiture, arbres nécessaires, énergie kWh
-
-### 4. Section Pédagogique
-- Explication des 8 principes d'éco-conception appliqués
-- Comparaison chiffrée avec un site web moyen
-- FAQ interactive sur le Green IT
+| Métrique | ÉcoWeb | Site moyen | Gain |
+|----------|--------|------------|------|
+| Éléments DOM | ~160 | ~1500 | 10× moins |
+| Poids total | ~22 Ko | ~2400 Ko | 100× plus léger |
+| Requêtes HTTP | 1 | ~80 | 80× moins |
+| CO₂ par visite | ~0.004g | ~0.5g | 125× moins |
 
 ---
 
-## 🌱 Principes d'Éco-conception Appliqués
+## Fonctionnalités
 
-### Architecture
-| Principe | Implémentation |
-|----------|----------------|
-| **Fichier unique** | HTML, CSS et JS regroupés → 1 seule requête HTTP |
-| **Zéro dépendances** | Aucune librairie externe (pas de React, jQuery, etc.) |
-| **Pas d'images** | Design 100% CSS, icônes en emoji Unicode |
+### Éco-Score en temps réel
+L'application calcule automatiquement un score environnemental (0-100) basé sur :
+- Le nombre d'éléments DOM
+- Le poids de la page en Ko
+- Le nombre de requêtes HTTP
 
-### Performance
-| Principe | Implémentation |
-|----------|----------------|
-| **Polices système** | `system-ui` → 0 Ko de fonts téléchargées |
-| **CSS optimisé** | Variables CSS, minification, pas de framework |
-| **JavaScript minimal** | Vanilla JS pur, ~2 Ko de code fonctionnel |
+Une jauge SVG animée affiche le résultat avec un grade (A+ à D).
 
-### Expérience Utilisateur
-| Principe | Implémentation |
-|----------|----------------|
-| **Thème sombre** | Économie d'énergie sur écrans OLED/AMOLED |
-| **Responsive léger** | Media queries minimales avec CSS Grid |
-| **Accessibilité** | HTML sémantique, ARIA, navigation clavier |
+### Calculateur d'impact carbone
+Permet d'estimer l'empreinte carbone annuelle d'un site selon :
+- Le nombre de visites mensuelles
+- Le nombre de pages par visite
+- Le poids moyen par page
+
+Résultats exprimés en kg CO₂, km en voiture, arbres nécessaires et kWh.
+
+### Internationalisation
+L'application est disponible en français (par défaut) et en anglais. Le choix de langue est conservé dans le navigateur.
+
+### Section pédagogique
+- 6 principes d'éco-conception expliqués
+- Comparaison avec un site web moyen
+- FAQ sur le Green IT
 
 ---
 
-## 🛠️ Stack Technique
+## Principes d'éco-conception appliqués
+
+### Architecture minimale
+- **Fichier unique** : HTML, CSS et JavaScript regroupés dans un seul fichier
+- **Zéro dépendances** : aucune librairie externe (React, jQuery, etc.)
+- **Pas d'images** : design 100% CSS avec icônes emoji
+
+### Performance optimisée
+- **Polices système** : utilisation de `system-ui` sans téléchargement
+- **CSS natif** : variables CSS, Grid et Flexbox sans framework
+- **JavaScript vanilla** : code léger compatible tous navigateurs
+
+### Expérience utilisateur
+- **Thème sombre** : économie d'énergie sur écrans OLED
+- **Design responsive** : adaptation mobile avec media queries minimales
+- **Accessibilité** : HTML sémantique et navigation clavier
+
+---
+
+## Technologies utilisées
 
 ```
-HTML5      → Structure sémantique
-CSS3       → Variables, Grid, Flexbox, animations
-JavaScript → Vanilla ES5 (compatibilité maximale)
-SVG        → Jauge de score animée
+HTML5        Structure sémantique
+CSS3         Variables, Grid, Flexbox, animations
+JavaScript   Vanilla ES5 (compatibilité maximale)
+SVG          Jauge de score animée
 ```
 
-**Aucune dépendance externe** — Le projet n'utilise :
-- ❌ Aucun framework JS (React, Vue, Angular)
-- ❌ Aucun framework CSS (Tailwind, Bootstrap)
-- ❌ Aucune police web (Google Fonts)
-- ❌ Aucun CDN externe
-- ❌ Aucune image/média
+Le projet n'utilise aucun framework, aucune police externe, aucun CDN et aucune image.
 
 ---
 
-## 📁 Structure du Projet
+## Structure du projet
 
 ```
 green-it/
-├── index.html    # Application complète (HTML + CSS + JS)
-└── README.md     # Documentation
+├── index.html    Application complète
+└── README.md     Documentation
 ```
 
-**1 seul fichier** = 1 seule requête HTTP = impact minimal
+Un seul fichier = une seule requête HTTP = impact minimal.
 
 ---
 
-## 🚀 Déploiement
+## Installation et déploiement
 
 ### Développement local
+
 ```bash
-# Serveur Python
+# Avec Python
 python3 -m http.server 8080
 
-# Ou avec Node.js
+# Avec Node.js
 npx serve .
+
+# Avec PHP
+php -S localhost:8080
 ```
+
+Ouvrir ensuite http://localhost:8080 dans le navigateur.
 
 ### Production
-Le fichier `index.html` peut être déployé sur n'importe quel hébergeur statique :
-- **O2Switch** (partenaire du challenge)
+
+Le fichier `index.html` peut être déployé sur n'importe quel hébergeur :
+- O2Switch (partenaire du challenge)
 - Netlify, Vercel, GitHub Pages
-- Tout serveur Apache/Nginx
+- Serveur Apache, Nginx
 
-**Recommandations serveur :**
-- Activer la compression Gzip/Brotli
-- Configurer le cache HTTP (max-age: 1 an pour fichier unique)
-- Utiliser HTTP/2
-
----
-
-## 📈 Calculs Environnementaux
-
-### Formules utilisées
-
-**CO₂ par visite :**
-```
-CO₂ (g) = Poids page (Ko) × 0.0002
-```
-*Facteur incluant : datacenter, réseau, terminal utilisateur*
-
-**Équivalent arbres :**
-```
-Arbres = (CO₂ annuel en g) / 21000
-```
-*Un arbre absorbe ~21 kg de CO₂/an*
-
-**Équivalent voiture :**
-```
-km = (CO₂ en kg) / 0.12
-```
-*Émission moyenne : 120g CO₂/km*
+**Optimisations serveur recommandées :**
+- Compression Gzip ou Brotli
+- Cache HTTP avec max-age long
+- HTTP/2 activé
 
 ---
 
-## ♿ Accessibilité
+## Formules de calcul
 
-- ✅ HTML sémantique (`<main>`, `<nav>`, `<section>`, `<header>`)
-- ✅ Lien "Skip to content" pour lecteurs d'écran
-- ✅ Attributs ARIA (`aria-label`, `aria-expanded`, `role`)
-- ✅ Navigation clavier complète (Tab, Enter, Space)
-- ✅ Contraste suffisant (WCAG AA)
-- ✅ Focus visible sur éléments interactifs
-
----
-
-## 🎨 Design System
-
-### Palette de couleurs
-| Variable | Valeur | Usage |
-|----------|--------|-------|
-| `--bg` | `#0a0f14` | Arrière-plan principal |
-| `--surface` | `#12181f` | Cartes et sections |
-| `--accent` | `#22c55e` | Éléments interactifs, succès |
-| `--warning` | `#eab308` | Alertes modérées |
-| `--danger` | `#ef4444` | Alertes critiques |
-
-### Typographie
-```css
-font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+### CO₂ par visite
 ```
-*Polices natives du système → 0 requête, rendu instantané*
+CO₂ (g) = Poids (Ko) × 0.0002
+```
+Facteur incluant datacenter, réseau et terminal.
+
+### Équivalent arbres
+```
+Arbres = CO₂ annuel (kg) / 21
+```
+Un arbre absorbe environ 21 kg de CO₂ par an.
+
+### Équivalent voiture
+```
+km = CO₂ (kg) / 0.12
+```
+Émission moyenne d'une voiture : 120g CO₂/km.
 
 ---
 
-## 📋 Critères du Challenge
+## Accessibilité
 
-Le projet répond aux 3 critères d'évaluation :
+- HTML sémantique (`main`, `nav`, `section`, `header`)
+- Navigation clavier fonctionnelle
+- Contrastes conformes WCAG AA
+- Labels explicites sur les formulaires
+
+---
+
+## Critères du challenge
 
 | Critère | Objectif | Résultat |
 |---------|----------|----------|
-| **Éléments DOM** | Minimiser | ~180 éléments |
-| **Poids des données** | Minimiser | ~30 Ko |
-| **Requêtes HTTP** | Minimiser | 1 requête |
+| Éléments DOM | Minimiser | ~160 |
+| Poids des données | Minimiser | ~22 Ko |
+| Requêtes HTTP | Minimiser | 1 |
 
 ---
 
-## 🔮 Évolutions Possibles
+## Licence
 
-- [ ] Mode hors-ligne avec Service Worker
-- [ ] Export PDF du rapport d'analyse
-- [ ] API réelle pour analyser des URLs externes
-- [ ] Internationalisation (EN, ES, DE)
-- [ ] Mode clair optionnel avec `prefers-color-scheme`
+Projet créé pour le Challenge Green IT organisé par NoctEvent en partenariat avec O2Switch.
 
 ---
 
-## 📄 Licence
-
-Projet open-source créé pour le **Challenge Green IT** organisé par **NoctEvent** en partenariat avec **O2Switch**.
-
----
-
-<p align="center">
-  <strong>🌱 Conçu avec sobriété numérique</strong><br>
-  <em>Chaque octet compte.</em>
-</p>
+*Conçu avec sobriété numérique — Chaque octet compte.*
